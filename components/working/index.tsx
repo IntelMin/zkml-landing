@@ -6,7 +6,7 @@ type Props = {};
 
 export const Works = (props: Props) => {
   return (
-    <div className="relative flex min-h-screen w-full justify-center px-[250px] py-8">
+    <div className="relative flex min-h-screen w-full justify-center py-8 md:px-[250px]">
       <Image
         src="/background/workingBg.png"
         alt="bg"
@@ -21,7 +21,7 @@ export const Works = (props: Props) => {
         height={401}
         className="absolute left-0 z-[-1]"
       />
-      <div className="grid w-full grid-cols-2 gap-12 p-12">
+      <div className="grid w-full gap-12 p-12 md:grid-cols-2">
         <div className="grid-cols-1 text-white">
           <div className="font-[PPUltrabold] text-[40px]">
             <h1>How it works</h1>
@@ -46,6 +46,7 @@ export const Works = (props: Props) => {
                 width={70}
                 height={10}
                 alt="purple-bg"
+                className="max-md:w-[200px]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
@@ -68,6 +69,7 @@ export const Works = (props: Props) => {
                 width={70}
                 height={10}
                 alt="purple-bg"
+                className="max-md:w-[35vh]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
@@ -91,7 +93,7 @@ export const Works = (props: Props) => {
                 height={56}
                 width={56}
                 alt="purple-bg"
-                className="h-[56px]"
+                className="h-[60px]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">

@@ -42,21 +42,21 @@ export const About = (props: Props) => {
         alt="bg"
         width={668}
         height={501}
-        className="absolute -top-[60px] right-[80px] z-[-1]"
+        className="absolute top-[40px] z-[-1] max-md:right-0 max-md:h-[350px] max-md:w-[350px] md:-top-[60px] md:right-[80px]"
       />
       <div className="relative flex flex-col">
         {/* About  */}
         <div className="flex justify-center">
-          <div className="flex w-[45%] flex-col gap-y-9">
-            <div className="w-[420px]">
-              <div className="font-[PPUltrabold] text-[80px] leading-[80px] text-white">
+          <div className="flex w-[75%] flex-col gap-y-9 md:w-[45%]">
+            <div className="md:w-[420px]">
+              <div className="font-[PPUltrabold] text-[60px] leading-10 text-white md:text-[80px] md:leading-[80px]">
                 <h1>About</h1>
               </div>
-              <div className="flex translate-x-[calc(40%)] font-[PPUltrabold] text-[80px] leading-[80px] text-white">
+              <div className="flex font-[PPUltrabold] text-[60px] text-white max-md:px-16 md:translate-x-[calc(40%)] md:text-[80px] md:leading-[80px]">
                 <h1>zKML</h1>
               </div>
               <div
-                className="mt-6 h-[5px] w-full"
+                className="h-[5px] w-[80%] md:w-full"
                 style={{
                   borderRadius: "25px",
                   background:
@@ -64,9 +64,9 @@ export const About = (props: Props) => {
                 }}
               />
             </div>
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-6 max-md:flex-col-reverse">
               <Link
-                className="w-[350px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white"
+                className="w-[250px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white md:w-[350px]"
                 href="#"
               >
                 Learn more
@@ -100,9 +100,12 @@ export const About = (props: Props) => {
           height={401}
           className="absolute py-[200px]"
         />
-        <div className="mb-[40px] mt-[166px] grid grid-cols-5 px-[56px]">
+        <div className="mb-[40px] mt-[30px] grid px-[56px] max-md:gap-5 md:mt-[166px] md:grid-cols-5">
           {aboutArr?.map((item) => (
-            <div key={item?.desc} className="flex flex-col gap-[38px]">
+            <div
+              key={item?.desc}
+              className="flex grid-cols-1 flex-col gap-5 md:gap-[38px]"
+            >
               <div className="px-8">
                 <Image src={item?.imagePath} alt="one" width={40} height={40} />
               </div>
@@ -110,30 +113,32 @@ export const About = (props: Props) => {
                 <h1 className="border-l border-[#38E5FF] px-8 text-[16px] font-[700] leading-[16px] text-white">
                   {item?.name}
                 </h1>
-                <p className="px-8 text-[16px] font-[700] text-[#AFE0E7]">
+                <p className="px-8 font-[700] text-[#AFE0E7] md:text-[16px]">
                   {item?.desc}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <div className="w-full">
-          <Image
-            src="/about/Chart.png"
-            width={1883}
-            height={173}
-            alt="chart"
-            className="px-[65px]"
-          />
-        </div>
-        <div className="w-full">
-          <Image
-            src="/zlogo.png"
-            width={1883}
-            height={173}
-            alt="chart"
-            className="px-[65px]"
-          />
+        <div>
+          <div className="w-full">
+            <Image
+              src="/about/Chart.png"
+              width={1883}
+              height={173}
+              alt="chart"
+              className="px-[16px] md:px-[65px]"
+            />
+          </div>
+          <div className="w-full">
+            <Image
+              src="/zlogo.png"
+              width={1883}
+              height={173}
+              alt="chart"
+              className="px-[16px] md:px-[65px]"
+            />
+          </div>
         </div>
       </div>
     </div>

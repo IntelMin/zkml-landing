@@ -1,3 +1,4 @@
+import { isViewportValid } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -41,12 +42,13 @@ const a1 = [
 ];
 
 export const Ecosystem = (props: Props) => {
+  const isMobile = isViewportValid(768);
   return (
     <div className="flex w-full flex-col items-center gap-8 py-8" id="features">
       <div className="pb-4 font-[PPUltrabold] text-[40px] text-white">
         <h1>zKML Ecosystem</h1>
       </div>
-      <div className="grid w-[80%] grid-cols-3">
+      <div className="grid w-[80%] grid-cols-1 md:grid-cols-3">
         {a1?.slice(0, 3).map((item, i) => {
           return (
             <div
@@ -55,7 +57,7 @@ export const Ecosystem = (props: Props) => {
                 i < 2 ? "border-r border-[#333]" : ""
               }  flex-col items-center gap-2 p-[30px]`}
               style={
-                i !== 2
+                i !== 2 || !isMobile
                   ? {
                       background:
                         "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
@@ -82,7 +84,7 @@ export const Ecosystem = (props: Props) => {
             </div>
           );
         })}
-        <div className="col-span-3 h-[2px] w-full bg-[#29282840] bg-gradient-to-r from-[#1b1b1ba3] via-[#333] to-[black]" />
+        <div className="h-[2px] w-full bg-[#29282840] bg-gradient-to-r from-[#1b1b1ba3] via-[#333] to-[black] md:col-span-3" />
         {a1?.slice(3).map((item, i) => {
           return (
             <div
@@ -91,7 +93,7 @@ export const Ecosystem = (props: Props) => {
                 i < 2 ? "border-r border-[#333]" : ""
               }  flex-col items-center gap-2 p-[30px]`}
               style={
-                i !== 2
+                i !== 2 || !isMobile
                   ? {
                       background:
                         "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",

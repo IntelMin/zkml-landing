@@ -5,7 +5,7 @@ type Props = {};
 
 export const Privacy = (props: Props) => {
   return (
-    <div className="relative flex min-h-screen w-full justify-center px-[144px] py-8">
+    <div className="relative flex min-h-screen w-full justify-center px-[20px] py-8 md:px-[144px]">
       <Image
         src="/background/privacyBg.png"
         alt="bg"
@@ -13,8 +13,8 @@ export const Privacy = (props: Props) => {
         height={401}
         className="absolute left-0 z-[-1] translate-y-[150px]"
       />
-      <div className="grid w-full grid-cols-2 gap-12 rounded-[24px] border border-[#272727] p-12">
-        <div className="h-[600px] grid-cols-1 rounded-[16px] bg-[#1a1a1a]"></div>
+      <div className="grid w-full gap-12 rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-12 md:grid-cols-2 md:p-12">
+        <div className="h-[350px] grid-cols-1 rounded-[16px] bg-[#1a1a1a] md:h-[600px]"></div>
         <div className="grid-cols-1">
           <div className="flex flex-col gap-[104px]">
             <div>

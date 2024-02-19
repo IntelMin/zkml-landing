@@ -23,7 +23,7 @@ const navEle = [
 
 export const Navbar = (props: Props) => {
   return (
-    <div className="fixed left-0 top-[16px] z-[10] w-screen overflow-hidden">
+    <div className="fixed left-0 top-[16px] z-[10] w-screen overflow-hidden max-md:hidden">
       <div className="relative flex w-full items-start justify-center">
         <div className="flex -translate-y-[1px] items-center gap-[114px] bg-[url(/background/navbar.png)] bg-contain bg-center bg-no-repeat px-[91px]">
           {navEle?.map((item) => (

@@ -19,3 +19,4 @@ export default function Home() {
     </main>
   );
 }
+// radial-gradient(14.31% 0.77% at 51.7% 92.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))
