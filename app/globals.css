@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+@font-face {
+  font-family: "PPRegular";
+  src: url("../fonts/telegraf/PPTelegraf-Regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPUltrabold";
+  src: url("../fonts/telegraf/PPTelegraf-UltraBold.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPUltralight";
+  src: url("../fonts/telegraf/PPTelegraf-UltraLight.otf");
+  font-display: swap;
+}
