@@ -11,7 +11,7 @@ const desArray = [
 
 export const Roadmap = (props: Props) => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center gap-8 py-8">
+    <div className="flex min-h-screen w-full flex-col items-center gap-8 py-8 max-md:px-2">
       <div className="pb-4 font-[PPUltrabold] text-[40px] text-white">
         <h1>Our Roadmap</h1>
       </div>
@@ -20,7 +20,7 @@ export const Roadmap = (props: Props) => {
           <div key={item} className="flex items-center">
             <div className="flex flex-1 items-center justify-end gap-4">
               <h1
-                className="text-[36px] font-[700] text-white"
+                className="text-xl font-[700] text-white md:text-[36px]"
                 style={{
                   background: "linear-gradient(180deg, #FFF 0%, #A7A7A7 100%)",
                   backgroundClip: "text",
@@ -29,10 +29,12 @@ export const Roadmap = (props: Props) => {
               >
                 Phase {i + 1}
               </h1>
-              <div className="h-[2px] w-[140px] bg-[#333]" />
+              <div className="h-[2px] w-[50px] bg-[#333] md:w-[140px]" />
             </div>
             <div className="max-w-[550px] flex-1 border-b-2 border-l-2 border-[#333] p-8 pr-0">
-              <p className="text-[20px] font-[500] text-white">{item}</p>
+              <p className="text-sm font-[500] text-white md:text-[20px] md:leading-7">
+                {item}
+              </p>
             </div>
           </div>
         ))}

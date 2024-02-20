@@ -6,7 +6,7 @@ type Props = {};
 
 export const Works = (props: Props) => {
   return (
-    <div className="relative flex min-h-screen w-full justify-center px-[250px] py-8">
+    <div className="relative flex min-h-screen w-full justify-center py-8 md:px-[250px]">
       <Image
         src="/background/workingBg.png"
         alt="bg"
@@ -21,7 +21,7 @@ export const Works = (props: Props) => {
         height={401}
         className="absolute left-0 z-[-1]"
       />
-      <div className="grid w-full grid-cols-2 gap-12 p-12">
+      <div className="grid w-full gap-12 p-12 md:grid-cols-2">
         <div className="grid-cols-1 text-white">
           <div className="font-[PPUltrabold] text-[40px]">
             <h1>How it works</h1>
@@ -46,6 +46,7 @@ export const Works = (props: Props) => {
                 width={70}
                 height={10}
                 alt="purple-bg"
+                className="max-md:w-[200px]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
@@ -68,6 +69,7 @@ export const Works = (props: Props) => {
                 width={70}
                 height={10}
                 alt="purple-bg"
+                className="max-md:w-[35vh]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
@@ -91,7 +93,7 @@ export const Works = (props: Props) => {
                 height={56}
                 width={56}
                 alt="purple-bg"
-                className="h-[56px]"
+                className="h-[60px]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
@@ -114,54 +116,3 @@ export const Works = (props: Props) => {
     </div>
   );
 };
-{
-  /* <div className="flex gap-5">
-            <Image
-              src="/working/timeline.png"
-              width={70}
-              height={350}
-              alt="purple-bg"
-            />
-            <div className="pt-2">
-              <div>
-                <div className="pb-4 text-[20px] font-[700] text-white">
-                  <h1>Wallet Creation</h1>
-                </div>
-                <div className="flex flex-col gap-y-6 text-[16px] text-[#8F8F8F]">
-                  <h1>
-                    Users can create secure wallets within the zkShield DApp,
-                    generating a public ID and private keys to facilitate
-                    transactions.
-                  </h1>
-                </div>
-              </div>
-              <div>
-                <div className="pb-4 text-[20px] font-[700] text-white">
-                  <h1>Transaction Shielding</h1>
-                </div>
-                <div className="flex flex-col gap-y-6 text-[16px] text-[#8F8F8F]">
-                  <h1>
-                    When initiating a transaction, the ZKML employs
-                    state-of-the-art cryptographic protocols to obsure
-                    transaction from the public network, rendering them
-                    unintelligible to external observers.
-                  </h1>
-                </div>
-              </div>
-              <div>
-                <div className="pb-4 text-[20px] font-[700] text-white">
-                  <h1>Confirmation on XRPL</h1>
-                </div>
-                <div className="flex flex-col gap-y-6 text-[16px] text-[#8F8F8F]">
-                  <h1>
-                    Funds get sent to a secret blockchain wallet which is
-                    confirmed and withdrawn using the private keys. This ensures
-                    that the privacy-enhanced transfer is seamlessly integrated
-                    into the broader blockchain network without revealing
-                    intrinsic details.
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div> */
-}
