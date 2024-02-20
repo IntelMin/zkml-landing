@@ -31,12 +31,12 @@ export const Hero = (props: Props) => {
         <div
           className={`h-screen md:hidden ${
             isOpen ? "max-md:w-[250px]" : "max-md:w-0 max-md:px-0"
-          } max-md:overflow-hidden transition-all`}
+          } max-md:overflow-hidden `}
         >
           <div
             className={`fixed z-[100] h-[100vh] ${
               isOpen ? "max-md:w-screen" : "max-md:w-0"
-            } max-md:overflow-hidden transition-all bg-[#000000] p-4`}
+            } max-md:overflow-hidden bg-[#000000] p-4`}
           >
             <div onClick={() => setIsOpen(false)} className="flex justify-end">
               <IoCloseOutline className="text-5xl text-white" />
@@ -106,7 +106,7 @@ export const Hero = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="absolute left-0 top-0 z-[-1] flex items-center max-md:flex-col">
+      <div className="absolute left-0 top-0 z-[-10] flex items-center max-md:flex-col">
         <Image
           src="/background/blue.png"
           width={500}
@@ -120,7 +120,16 @@ export const Hero = (props: Props) => {
           alt="purple-bg"
         />
       </div>
-      <div className="flex min-h-[calc(100vh-32px)] w-full flex-col rounded-l-[24px] rounded-t-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/background/herobg.png)] bg-cover bg-center pl-3 pr-8 md:pl-12">
+      <div className="relative flex min-h-[calc(100vh-32px)] w-full flex-col overflow-hidden rounded-[24px] border border-b-0 border-r-0 border-[#3D3D3D] p-5">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-center"
+        >
+          <source src="/background/ZKMLHerosectionLoop.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="flex flex-1 items-center font-[PPUltrabold] text-[35px] font-extrabold leading-[35px] text-white max-md:pb-20 md:text-[52px] md:leading-[60px]">
           <h1>
             Unlocking Privacy, Secure <br /> Blockchain Communication, <br />{" "}
@@ -136,7 +145,7 @@ export const Hero = (props: Props) => {
           <div className="md:w-[30%]">
             <div className="flex flex-col gap-2 text-white">
               <div>
-                <h1>
+                <h1 className="text-white">
                   zkml - harnessing machine learning to create zk-proofs and
                   secure multiparty computation for data privacy.
                 </h1>
