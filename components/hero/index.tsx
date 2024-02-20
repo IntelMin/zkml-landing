@@ -3,12 +3,72 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseOutline } from "react-icons/io5";
 
 type Props = {};
 
+const navEle = [
+  {
+    name: "Home",
+    href: "#hero",
+  },
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Features",
+    href: "#features",
+  },
+];
+
 export const Hero = (props: Props) => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="relative p-2 md:p-4" id="hero">
+      {isOpen && (
+        <div
+          className={`h-screen md:hidden ${
+            isOpen ? "max-md:w-[250px]" : "max-md:w-0 max-md:px-0"
+          } max-md:overflow-hidden transition-all`}
+        >
+          <div
+            className={`fixed z-[100] h-[100vh] ${
+              isOpen ? "max-md:w-screen" : "max-md:w-0"
+            } max-md:overflow-hidden transition-all bg-[#000000] p-4`}
+          >
+            <div onClick={() => setIsOpen(false)} className="flex justify-end">
+              <IoCloseOutline className="text-5xl text-white" />
+            </div>
+            <div className="flex h-[90dvh] flex-col">
+              <div className="flex flex-1 flex-col items-start p-5">
+                {navEle?.map((item) => (
+                  <button
+                    key={item?.name}
+                    onClick={() => {
+                      const ele = document.querySelector(item?.href);
+                      ele?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                      setIsOpen(false);
+                    }}
+                    className="border-b-[2px] border-b-transparent pb-[12px] pt-[19px] text-[36px] font-[520] text-white hover:border-white hover:text-[#38E5FF]"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+              <Link
+                href="#"
+                className="mx-auto w-[180px] rounded-[12px] bg-white px-10 py-3 text-center text-black"
+              >
+                dApp
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="absolute left-0 top-1 flex w-full items-center justify-between">
         <div className="z-10 pl-6 pt-8 md:pl-12">
           <button
@@ -36,6 +96,14 @@ export const Hero = (props: Props) => {
           >
             dApp
           </Link>
+          <div
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+            }}
+            className="md:hidden"
+          >
+            <GiHamburgerMenu className="text-xl text-white" />
+          </div>
         </div>
       </div>
       <div className="absolute left-0 top-0 z-[-1] flex items-center max-md:flex-col">
