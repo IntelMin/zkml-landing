@@ -1,5 +1,6 @@
 "use client";
 
+import { isViewportValid } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -25,6 +26,7 @@ const navEle = [
 
 export const Hero = (props: Props) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const isMobile = isViewportValid(768);
   return (
     <div className="relative p-2 md:p-4" id="hero">
       {isOpen && (
@@ -106,7 +108,7 @@ export const Hero = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="absolute left-0 top-0 z-[-1] flex items-center max-md:flex-col">
+      <div className="absolute left-0 top-0 z-[-10] flex items-center max-md:flex-col">
         <Image
           src="/background/blue.png"
           width={500}
@@ -120,20 +122,39 @@ export const Hero = (props: Props) => {
           alt="purple-bg"
         />
       </div>
-      <div className="flex min-h-[calc(100vh-32px)] w-full flex-col rounded-l-[24px] rounded-t-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/background/herobg.png)] bg-cover bg-center pl-3 pr-8 md:pl-12">
+      <div className="relative flex min-h-[calc(100vh-32px)] w-full flex-col overflow-hidden rounded-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/ecosystem/dust.png)] p-5 md:pb-0 md:pr-0">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-center"
+        >
+          <source src="/background/ZKMLHerosectionLoop.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="flex flex-1 items-center font-[PPUltrabold] text-[35px] font-extrabold leading-[35px] text-white max-md:pb-20 md:text-[52px] md:leading-[60px]">
           <h1>
             Unlocking Privacy, Secure <br /> Blockchain Communication, <br />{" "}
             and Cross Interoperability
           </h1>
         </div>
-        <div className="flex justify-between pb-4 max-md:flex-col max-md:pb-[60px]">
-          <div className="flex items-end">
+        <div className="relative flex justify-between max-md:flex-col max-md:pb-[60px]">
+          <div className="flex items-end p-5 md:pb-9">
             <h1 className="text-white">
               zKML - Zero Knowledge Machine Learning
             </h1>
           </div>
-          <div className="md:w-[30%]">
+          {/* Right  */}
+          {/* Right  */}
+          {/* Right  */}
+          {/* Right  */}
+          <div
+            className="rounded-tl-[24px] p-5 md:w-[30%] md:bg-black md:p-9"
+            // style={{
+            //   clipPath: "polygon(9% 0, 100% 0, 100% 100%, 0% 100%)",
+            // }}
+          >
+            {/* <div className="absolute left-0 top-0 z-[999] size-12 translate-x-[40px] translate-y-[-10px] rounded-full bg-black" /> */}
             <div className="flex flex-col gap-2 text-white">
               <div>
                 <h1>

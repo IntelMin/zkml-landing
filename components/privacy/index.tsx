@@ -1,9 +1,34 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
 export const Privacy = (props: Props) => {
+  React.useEffect(() => {
+    gsap.fromTo(
+      "#privacy",
+      {
+        y: 150,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#privacy",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 10,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power4.out",
+      }
+    );
+  });
   return (
     <div className="relative flex min-h-screen w-full justify-center px-[20px] py-8 md:px-[144px]">
       <Image
@@ -16,7 +41,7 @@ export const Privacy = (props: Props) => {
       <div className="grid w-full gap-12 rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-12 md:grid-cols-2 md:p-12">
         <div className="h-[350px] grid-cols-1 rounded-[16px] bg-[#1a1a1a] md:h-[600px]"></div>
         <div className="grid-cols-1">
-          <div className="flex flex-col gap-[104px]">
+          <div className="flex flex-col gap-[104px]" id="privacy">
             <div>
               <div className="pb-12">
                 <div className="pb-4 font-[PPUltrabold] text-[40px] text-white">

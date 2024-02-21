@@ -4,7 +4,7 @@ type Props = {};
 
 const desArray = [
   "Develop ZKML's core infrastructure, Privacy Router, integrate zSnarky, establish connections with ROSE and MINA networks.",
-  "Launch AnonAI Search, develop zKOS and Mobile-zKOS, implement Privacy-Centric VoIP.",
+  "Launch zKSearch, develop zKOS and Mobile-zKOS, implement Privacy-Centric VoIP.",
   "Introduce zkShield, enhance interoperability with ROSE and MINA networks, establish partnerships for cross-chain transactions.",
   "Conduct testing and security audits, scale up user base through marketing and partnerships, expand services to include private browsing features, continuously improve platform based on user feedback and emerging technologies.",
 ];

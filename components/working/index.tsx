@@ -1,18 +1,128 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
 export const Works = (props: Props) => {
+  React.useEffect(() => {
+    gsap.fromTo(
+      "#bgGreen",
+      {
+        y: -30,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#wallet",
+          start: "bottom center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 50,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power3.out",
+      }
+    );
+    gsap.fromTo(
+      "#eth",
+      {
+        y: 150,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#wallet",
+          start: "bottom center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: -30,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power4.out",
+      }
+    );
+  });
+  React.useEffect(() => {
+    if (window.innerWidth >= 768) {
+      gsap.fromTo(
+        "#wallet",
+        {
+          y: 150,
+          opacity: 0.4,
+        },
+        {
+          scrollTrigger: {
+            trigger: "#working",
+            start: "left center",
+            toggleActions: "restart pause reverse pause",
+            scrub: 1,
+          },
+          y: -10,
+          opacity: 1,
+          duration: 1.3,
+          ease: "power4.out",
+        }
+      );
+      gsap.fromTo(
+        "#transaction",
+        {
+          y: 180,
+          opacity: 0.4,
+        },
+        {
+          scrollTrigger: {
+            trigger: "#working",
+            start: "left center",
+            toggleActions: "restart pause reverse pause",
+            scrub: 1,
+          },
+          y: -10,
+          opacity: 1,
+          duration: 1.4,
+          ease: "power4.out",
+        }
+      );
+      gsap.fromTo(
+        "#confirmation",
+        {
+          y: 180,
+          opacity: 0.4,
+        },
+        {
+          scrollTrigger: {
+            trigger: "#working",
+            start: "left center",
+            toggleActions: "restart pause reverse pause",
+            scrub: 1,
+          },
+          y: -10,
+          opacity: 1,
+          duration: 1,
+          ease: "power4.out",
+        }
+      );
+    }
+  });
   return (
-    <div className="relative flex min-h-screen w-full justify-center py-8 md:px-[250px]">
+    <div
+      className="relative flex min-h-screen w-full justify-center py-8 md:px-[250px]"
+      id="working"
+    >
       <Image
         src="/background/workingBg.png"
         alt="bg"
         width={768}
         height={501}
         className="absolute -top-[320px] right-0 z-[-1]"
+        id="bgGreen"
       />
       <Image
         src="/about/ethBg.png"
@@ -20,6 +130,7 @@ export const Works = (props: Props) => {
         width={468}
         height={401}
         className="absolute left-0 z-[-1]"
+        id="eth"
       />
       <div className="grid w-full gap-12 p-12 md:grid-cols-2">
         <div className="grid-cols-1 text-white">
@@ -39,7 +150,7 @@ export const Works = (props: Props) => {
           </div>
         </div>
         <div className="flex grid-cols-1 flex-col gap-5">
-          <div>
+          <div id="wallet">
             <div className="flex gap-[32px]">
               <Image
                 src="/working/wallet.png"
@@ -62,7 +173,7 @@ export const Works = (props: Props) => {
               </div>
             </div>
           </div>
-          <div>
+          <div id="transaction">
             <div className="flex gap-[32px]">
               <Image
                 src="/working/transaction.png"
@@ -87,7 +198,7 @@ export const Works = (props: Props) => {
             </div>
           </div>
           <div>
-            <div className="flex gap-[32px]">
+            <div className="flex gap-[32px]" id="confirmation">
               <Image
                 src="/working/regiuster.png"
                 height={56}
