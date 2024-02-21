@@ -1,36 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { footerLinks } from "./footer-ele";
 
 type Props = {};
-
-const footerLinks = [
-  {
-    title: "Contact",
-    links: [
-      { name: "X(twitter)", link: "/" },
-      { name: "Reddit", link: "/" },
-      { name: "Telegram", link: "/" },
-      { name: "info@zkml.systems", link: "/" },
-    ],
-  },
-  {
-    title: "Menu",
-    links: [
-      { name: "Home", link: "/" },
-      { name: "About", link: "/" },
-      { name: "Features", link: "/" },
-      { name: "How it works", link: "/" },
-    ],
-  },
-  {
-    title: "Token",
-    links: [
-      { name: "Etherscan", link: "/" },
-      { name: "Dextools", link: "/" },
-    ],
-  },
-];
 
 export const Footer = (props: Props) => {
   return (
@@ -77,10 +50,10 @@ export const Footer = (props: Props) => {
                 <ul>
                   {item.links.map((link) => (
                     <li
-                      className="hover:text-slate-gray mt-3 cursor-pointer text-xl leading-normal text-white md:text-base"
+                      className="mt-3 text-xl leading-normal text-white hover:text-[#38E5FF] md:text-base"
                       key={link.name}
                     >
-                      <a>{link.name}</a>
+                      <Link href={link.link}>{link.name}</Link>
                     </li>
                   ))}
                 </ul>

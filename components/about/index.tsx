@@ -152,8 +152,8 @@ export const About = (props: Props) => {
             </div>
             <div className="flex items-start gap-6 max-md:flex-col-reverse">
               <Link
-                className="w-[250px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white md:w-[350px]"
-                href="#"
+                className="w-[250px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white hover:bg-white hover:text-black md:w-[350px]"
+                href="https://zkml.gitbook.io/doc"
               >
                 Learn more
               </Link>
@@ -221,11 +221,11 @@ export const About = (props: Props) => {
           </div>
           <div className="w-full">
             <Image
-              src="/zlogo.png"
+              src="/about/zlogo.svg"
               width={1883}
               height={173}
               alt="chart"
-              className="px-[16px] md:px-[65px]"
+              className="bg-[black] object-contain px-[16px] md:px-[65px]"
             />
           </div>
         </div>

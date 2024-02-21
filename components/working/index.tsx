@@ -142,8 +142,8 @@ export const Works = (props: Props) => {
           </div>
           <div className="py-6">
             <Link
-              className="w-[300px] rounded-[12px] bg-[#38E5FF] px-[63px] py-3 text-center text-[16px] text-black"
-              href="#"
+              className="w-[300px] rounded-[12px] bg-[#38E5FF] px-[63px] py-3 text-center text-[16px] text-black hover:bg-[#47a7c4]"
+              href="https://dapp.zkml.systems/"
             >
               dApp
             </Link>
@@ -152,13 +152,22 @@ export const Works = (props: Props) => {
         <div className="flex grid-cols-1 flex-col gap-5">
           <div id="wallet">
             <div className="flex gap-[32px]">
-              <Image
-                src="/working/wallet.png"
-                width={70}
-                height={10}
-                alt="purple-bg"
-                className="max-md:w-[200px]"
-              />
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src="/working/walletCreation.png"
+                  width={156}
+                  height={56}
+                  alt="purple-bg"
+                  className="max-md:w-[230px]"
+                />
+                <Image
+                  src="/working/bar1.png"
+                  width={8}
+                  height={70}
+                  alt="purple-bg"
+                  className="max-md:h-[100px]"
+                />
+              </div>
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
                   <h1>Wallet Creation</h1>
@@ -175,13 +184,22 @@ export const Works = (props: Props) => {
           </div>
           <div id="transaction">
             <div className="flex gap-[32px]">
-              <Image
-                src="/working/transaction.png"
-                width={70}
-                height={10}
-                alt="purple-bg"
-                className="max-md:w-[35vh]"
-              />
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src="/working/transactionShielding.png"
+                  width={216}
+                  height={56}
+                  alt="purple-bg"
+                  className="max-md:w-[310px]"
+                />
+                <Image
+                  src="/working/bar2.png"
+                  width={8}
+                  height={50}
+                  alt="purple-bg"
+                  className="max-md:h-[180px]"
+                />
+              </div>
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
                   <h1>Transaction Shielding</h1>
@@ -198,13 +216,13 @@ export const Works = (props: Props) => {
             </div>
           </div>
           <div>
-            <div className="flex gap-[32px]" id="confirmation">
+            <div className="flex gap-[25px]" id="confirmation">
               <Image
-                src="/working/regiuster.png"
-                height={56}
-                width={56}
+                src="/working/confirmationXRPL.png"
+                height={36}
+                width={66}
                 alt="purple-bg"
-                className="h-[60px]"
+                className="h-[66px] max-md:w-[200px]"
               />
               <div>
                 <div className="pb-4 text-[20px] font-[700] text-white">
