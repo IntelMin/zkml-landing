@@ -81,7 +81,7 @@ export const Hero = (props: Props) => {
           muted
           className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-center"
         >
-          <source src="/background/ZKMLHerosectionLoop.mp4" type="video/mp4" />
+          <source src="/background/ZKMLHero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="flex flex-1 items-center font-[PPUltrabold] text-[35px] font-extrabold leading-[35px] text-white max-md:pb-20 md:text-[52px] md:leading-[60px]">
