@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 const aboutArr = [
@@ -32,6 +37,86 @@ const aboutArr = [
 ];
 
 export const About = (props: Props) => {
+  React.useEffect(() => {
+    gsap.fromTo(
+      "#aboutDiv",
+      {
+        y: 100,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power4.out",
+      }
+    );
+    gsap.fromTo(
+      "#featBox",
+      {
+        y: 100,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#features",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power4.out",
+      }
+    );
+    gsap.fromTo(
+      "#aboutImg",
+      {
+        x: 0,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        x: -20,
+        stagger: 0.03,
+        opacity: 1,
+        duration: 1.5,
+        ease: "power4.out",
+      }
+    );
+    gsap.fromTo(
+      "#aboutFeatures",
+      {
+        y: 100,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 0,
+        stagger: 0.03,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power4.out",
+      }
+    );
+  });
   return (
     <div
       className="relative flex min-h-screen justify-center pb-0 pt-[106px]"
@@ -42,9 +127,10 @@ export const About = (props: Props) => {
         alt="bg"
         width={668}
         height={501}
+        id="aboutImg"
         className="absolute top-[40px] z-[-1] max-md:right-0 max-md:h-[350px] max-md:w-[350px] md:-top-[60px] md:right-[80px]"
       />
-      <div className="relative flex flex-col">
+      <div className="relative flex flex-col" id="aboutDiv">
         {/* About  */}
         <div className="flex justify-center">
           <div className="flex w-[75%] flex-col gap-y-9 md:w-[45%]">
@@ -100,7 +186,10 @@ export const About = (props: Props) => {
           height={401}
           className="absolute py-[200px]"
         />
-        <div className="mb-[40px] mt-[30px] grid px-[56px] max-md:gap-5 md:mt-[166px] md:grid-cols-5">
+        <div
+          className="mb-[40px] mt-[30px] grid px-[56px] max-md:gap-5 md:mt-[166px] md:grid-cols-5"
+          id="aboutFeatures"
+        >
           {aboutArr?.map((item) => (
             <div
               key={item?.desc}

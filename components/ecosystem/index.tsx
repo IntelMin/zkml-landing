@@ -1,6 +1,11 @@
+"use client";
+
 import { isViewportValid } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
@@ -42,6 +47,27 @@ const a1 = [
 ];
 
 export const Ecosystem = (props: Props) => {
+  React.useEffect(() => {
+    gsap.fromTo(
+      "#features",
+      {
+        y: 100,
+        opacity: 0.4,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#features",
+          start: "top center",
+          toggleActions: "restart pause reverse pause",
+          scrub: 1,
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power4.out",
+      }
+    );
+  });
   const isMobile = isViewportValid(768);
   return (
     <div className="flex w-full flex-col items-center gap-8 py-8" id="features">

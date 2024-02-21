@@ -31,12 +31,12 @@ export const Hero = (props: Props) => {
         <div
           className={`h-screen md:hidden ${
             isOpen ? "max-md:w-[250px]" : "max-md:w-0 max-md:px-0"
-          } max-md:overflow-hidden `}
+          } max-md:overflow-hidden transition-all`}
         >
           <div
             className={`fixed z-[100] h-[100vh] ${
               isOpen ? "max-md:w-screen" : "max-md:w-0"
-            } max-md:overflow-hidden bg-[#000000] p-4`}
+            } max-md:overflow-hidden transition-all bg-[#000000] p-4`}
           >
             <div onClick={() => setIsOpen(false)} className="flex justify-end">
               <IoCloseOutline className="text-5xl text-white" />
@@ -145,7 +145,7 @@ export const Hero = (props: Props) => {
           <div className="md:w-[30%]">
             <div className="flex flex-col gap-2 text-white">
               <div>
-                <h1 className="text-white">
+                <h1>
                   zkml - harnessing machine learning to create zk-proofs and
                   secure multiparty computation for data privacy.
                 </h1>
