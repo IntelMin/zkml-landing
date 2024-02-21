@@ -8,31 +8,45 @@ const footerLinks = [
   {
     title: "Contact",
     links: [
-      { name: "X(twitter)", link: "/" },
-      { name: "Reddit", link: "/" },
-      { name: "Telegram", link: "/" },
-      { name: "info@zkml.systems", link: "/" },
+      { name: "X(twitter)", link: "https://twitter.com/zkmlsystems" },
+      { name: "Reddit", link: "https://www.reddit.com/r/ZKML/about/" },
+      { name: "Telegram", link: "https://t.me/zkmlsystems" },
+      { name: "info@zkml.systems", link: "mailto:info@zkml.systems" },
     ],
   },
   {
     title: "Menu",
     links: [
-      { name: "Home", link: "/" },
-      { name: "About", link: "/" },
-      { name: "Features", link: "/" },
-      { name: "How it works", link: "/" },
+      { name: "Home", link: "#hero" },
+      { name: "About", link: "#about" },
+      { name: "Features", link: "#features" },
+      { name: "How it works", link: "#working" },
     ],
   },
   {
     title: "Token",
     links: [
-      { name: "Etherscan", link: "/" },
-      { name: "Dextools", link: "/" },
+      {
+        name: "Etherscan",
+        link: "https://etherscan.io/token/0xe92344b4edf545f3209094b192e46600a19e7c2d",
+      },
+      {
+        name: "Dextools",
+        link: "https://www.dextools.io/app/en/ether/pair-explorer/0x315ed60258702f8d159b98df4c0dbeb1d7d776df",
+      },
     ],
   },
 ];
 
 export const Footer = (props: Props) => {
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="px-[10px] pb-5 md:px-[72px] md:py-10 md:pb-10">
       <div
@@ -77,10 +91,10 @@ export const Footer = (props: Props) => {
                 <ul>
                   {item.links.map((link) => (
                     <li
-                      className="hover:text-slate-gray mt-3 cursor-pointer text-xl leading-normal text-white md:text-base"
+                      className="mt-3 text-xl leading-normal text-white hover:text-[#38E5FF] md:text-base"
                       key={link.name}
                     >
-                      <a>{link.name}</a>
+                      <Link href={link.link}>{link.name}</Link>
                     </li>
                   ))}
                 </ul>

@@ -30,13 +30,13 @@ export const Privacy = (props: Props) => {
     );
   });
   return (
-    <div className="relative flex min-h-screen w-full justify-center px-[20px] py-8 md:px-[144px]">
+    <div className="relative flex min-h-screen w-full flex-col justify-center gap-5 px-[20px] py-8 md:px-[144px]">
       <Image
         src="/background/privacyBg.png"
         alt="bg"
         width={468}
         height={401}
-        className="absolute left-0 z-[-1] translate-y-[150px]"
+        className="absolute left-0 top-0 z-[-1] translate-y-[150px]"
       />
       <div className="grid w-full gap-12 rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-12 md:grid-cols-2 md:p-12">
         <div className="h-[350px] grid-cols-1 rounded-[16px] bg-[#1a1a1a] md:h-[600px]"></div>
@@ -108,6 +108,15 @@ export const Privacy = (props: Props) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full">
+        <Image
+          src="/zKSearch.gif"
+          width={1883}
+          height={173}
+          alt="chart"
+          className="bg-[black] object-contain px-[16px] md:px-[65px]"
+        />
       </div>
     </div>
   );

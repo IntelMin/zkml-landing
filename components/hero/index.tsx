@@ -62,7 +62,7 @@ export const Hero = (props: Props) => {
                 ))}
               </div>
               <Link
-                href="#"
+                href="https://zkml.systems/"
                 className="mx-auto w-[180px] rounded-[12px] bg-white px-10 py-3 text-center text-black"
               >
                 dApp
@@ -93,8 +93,8 @@ export const Hero = (props: Props) => {
         </div>
         <div className="z-10 pr-12 pt-8">
           <Link
-            href="#"
-            className="rounded-[12px] bg-white px-10 py-3 text-black max-md:hidden"
+            href="https://dapp.zkml.systems/"
+            className="rounded-[12px] bg-white px-10 py-3 text-black hover:bg-[#c4c6c6] max-md:hidden"
           >
             dApp
           </Link>
@@ -164,14 +164,14 @@ export const Hero = (props: Props) => {
               </div>
               <div className="flex items-center gap-6">
                 <Link
-                  className="w-[174px] rounded-[12px] bg-[#38E5FF] py-2 text-center text-[16px] text-black"
-                  href="#"
+                  className="w-[174px] rounded-[12px] bg-[#38E5FF] py-2 text-center text-[16px] text-black hover:bg-[#47a7c4]"
+                  href="https://dapp.zkml.systems/"
                 >
                   dApp
                 </Link>
                 <Link
-                  className="w-[174px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white"
-                  href="#"
+                  className="w-[174px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white hover:bg-white hover:text-black"
+                  href="https://zkml.gitbook.io/doc"
                 >
                   Learn more
                 </Link>
