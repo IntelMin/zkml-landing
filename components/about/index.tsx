@@ -30,7 +30,7 @@ const aboutArr = [
     imagePath: "/about/four.png",
   },
   {
-    name: "AnonAI Search",
+    name: "zKSearch",
     desc: "Private browsing.",
     imagePath: "/about/five.png",
   },

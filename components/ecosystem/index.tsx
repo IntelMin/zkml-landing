@@ -12,7 +12,7 @@ type Props = {};
 const a1 = [
   {
     path: "/ecosystem/one.svg",
-    name: "AnonAI Search",
+    name: "zKSearch",
     description:
       "Decentralized search engines powered by AI models that do not store user data.",
   },
