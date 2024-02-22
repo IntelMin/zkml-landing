@@ -38,8 +38,17 @@ export const Privacy = (props: Props) => {
         height={401}
         className="absolute left-0 top-0 z-[-1] translate-y-[150px]"
       />
-      <div className="grid w-full gap-12 rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-12 md:grid-cols-2 md:p-12">
-        <div className="h-[350px] grid-cols-1 rounded-[16px] bg-[#1a1a1a] md:h-[600px]"></div>
+      <div className="grid w-full gap-12 overflow-hidden rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-4 md:grid-cols-2 md:p-12">
+        <div className="relative h-[380px] grid-cols-1 overflow-hidden rounded-[16px] md:h-[608px]">
+          <video
+            autoPlay
+            loop
+            muted
+            className="absolute h-full w-full object-cover object-center"
+          >
+            <source src="/background/privacyVideo.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="grid-cols-1">
           <div className="flex flex-col gap-[104px]" id="privacy">
             <div>
