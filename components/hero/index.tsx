@@ -79,10 +79,9 @@ export const Hero = (props: Props) => {
           autoPlay
           loop
           muted
-          className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-center"
+          className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-right"
         >
           <source src="/background/ZKMLHero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
         <div className="flex flex-1 items-center font-[PPUltrabold] text-[35px] font-extrabold leading-[35px] text-white max-md:pb-20 md:text-[52px] md:leading-[60px]">
           <h1>
@@ -90,16 +89,22 @@ export const Hero = (props: Props) => {
             and Cross Interoperability
           </h1>
         </div>
-        <div className="relative flex justify-between max-md:flex-col max-md:pb-[60px]">
+        <div className="relative flex justify-between max-md:flex-col max-md:pb-[20px]">
           <div className="flex items-end p-5 md:pb-9">
-            <h1 className="text-white">
+            <h1
+              className="text-white"
+              style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.6);" }}
+            >
               zKML - Zero Knowledge Machine Learning
             </h1>
           </div>
           <div className="rounded-tl-[24px] p-5 md:w-[30%] md:bg-black md:p-9">
-            <div className="flex flex-col gap-2 text-white">
+            <div className="flex flex-col gap-2">
               <div>
-                <h1>
+                <h1
+                  className="text-white"
+                  style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.6);" }}
+                >
                   zkml - harnessing machine learning to create zk-proofs and
                   secure multiparty computation for data privacy.
                 </h1>

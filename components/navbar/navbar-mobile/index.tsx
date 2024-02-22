@@ -11,19 +11,21 @@ type Props = {
 export const NavbarMobile = ({ isOpen, setIsOpen }: Props) => {
   return (
     <div
-      className={`h-screen md:hidden ${
-        isOpen ? "max-md:w-[250px]" : "max-md:w-0 max-md:px-0"
-      } max-md:overflow-hidden transition-all`}
+      className={`h-[65dvh] absolute md:hidden ${
+        isOpen ? "max-md:w-[60dvw]" : "max-md:w-0 max-md:px-0"
+      } max-md:overflow-hidden `}
     >
       <div
-        className={`fixed z-[100] h-[100vh] ${
-          isOpen ? "max-md:w-screen" : "max-md:w-0"
-        } max-md:overflow-hidden transition-all bg-[#000000] p-4`}
+        className={`fixed z-[100] h-[60vh] ${
+          isOpen
+            ? "max-md:w-[96dvw] max-md:ease-in-out max-md:duration-200"
+            : "max-md:w-0"
+        } overflow-hidden max-md:duration-500 rounded-[25px] backdrop-blur-xl border border-green-200 p-4 `}
       >
         <div onClick={() => setIsOpen(false)} className="flex justify-end">
           <IoCloseOutline className="text-5xl text-white" />
         </div>
-        <div className="flex h-[90dvh] flex-col">
+        <div className="flex h-[50dvh] flex-col">
           <div className="flex flex-1 flex-col items-start p-5">
             {navEle?.map((item) => (
               <button
@@ -41,12 +43,14 @@ export const NavbarMobile = ({ isOpen, setIsOpen }: Props) => {
               </button>
             ))}
           </div>
-          <Link
-            href="https://zkml.systems/"
-            className="mx-auto w-[180px] rounded-[12px] bg-white px-10 py-3 text-center text-black"
-          >
-            dApp
-          </Link>
+          <div className="flex justify-start">
+            <Link
+              href="https://zkml.systems/"
+              className="mx-auto w-[180px] rounded-[12px] bg-white px-10 py-3 text-center text-black"
+            >
+              dApp
+            </Link>
+          </div>
         </div>
       </div>
     </div>
