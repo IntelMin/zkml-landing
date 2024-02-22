@@ -103,7 +103,7 @@ export const Hero = (props: Props) => {
               <div>
                 <h1
                   className="text-white"
-                  style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.6);" }}
+                  style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.2);" }}
                 >
                   zkml - harnessing machine learning to create zk-proofs and
                   secure multiparty computation for data privacy.
