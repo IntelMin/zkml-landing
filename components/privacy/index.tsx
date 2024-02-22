@@ -119,13 +119,14 @@ export const Privacy = (props: Props) => {
         </div>
       </div>
       <div className="w-full">
-        <Image
-          src="/zKSearch.gif"
-          width={1883}
-          height={173}
-          alt="chart"
-          className="bg-[black] object-contain px-[16px] md:px-[65px]"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-full object-cover object-center"
+        >
+          <source src="/zKSearch.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   );
