@@ -136,7 +136,7 @@ export const Privacy = (props: Props) => {
           muted
           className="w-full object-cover object-center"
         >
-          <source src="./zKSearch-new.mp4" type="video/mp4" />
+          <source src="./zkresearch.mp4" />
         </video>
       </div>
     </div>
