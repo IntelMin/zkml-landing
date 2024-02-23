@@ -119,7 +119,7 @@ export const About = (props: Props) => {
   });
   return (
     <div
-      className="relative flex min-h-screen justify-center pb-0 pt-[106px]"
+      className="relative flex min-h-screen justify-center overflow-hidden pb-0 pt-[106px]"
       id="about"
     >
       <Image
@@ -128,21 +128,22 @@ export const About = (props: Props) => {
         width={668}
         height={501}
         id="aboutImg"
-        className="absolute top-[40px] z-[-1] max-md:right-0 max-md:h-[350px] max-md:w-[350px] md:-top-[60px] md:right-[80px]"
+        className="absolute top-[40px] z-[-1] max-md:top-0 max-md:h-[450px] max-md:w-[550px] md:-top-[60px] md:right-[80px]"
       />
       <div className="relative flex flex-col" id="aboutDiv">
-        {/* About  */}
         <div className="flex justify-center">
-          <div className="flex w-[75%] flex-col gap-y-9 md:w-[45%]">
+          <div className="flex w-[85%] flex-col gap-y-9 md:w-[45%]">
             <div className="md:w-[420px]">
-              <div className="font-[PPUltrabold] text-[60px] leading-10 text-white md:text-[80px] md:leading-[80px]">
-                <h1>About</h1>
-              </div>
-              <div className="flex font-[PPUltrabold] text-[60px] text-white max-md:px-16 md:translate-x-[calc(40%)] md:text-[80px] md:leading-[80px]">
-                <h1>zKML</h1>
+              <div className="pl-5">
+                <div className="font-[PPUltrabold] text-[80px] leading-10 text-white md:text-[80px] md:leading-[80px]">
+                  <h1>About</h1>
+                </div>
+                <div className="flex font-[PPUltrabold] text-[80px] text-white max-md:px-16 md:translate-x-[calc(40%)] md:text-[80px] md:leading-[80px]">
+                  <h1>zKML</h1>
+                </div>
               </div>
               <div
-                className="h-[5px] w-[80%] md:w-full"
+                className="h-[5px] w-full"
                 style={{
                   borderRadius: "25px",
                   background:
@@ -152,7 +153,7 @@ export const About = (props: Props) => {
             </div>
             <div className="flex items-start gap-6 max-md:flex-col-reverse">
               <Link
-                className="w-[250px] rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white hover:bg-white hover:text-black md:w-[350px]"
+                className="w-full rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white hover:bg-white hover:text-black max-md:text-[18px] md:w-[370px]"
                 href="https://zkml.gitbook.io/doc"
               >
                 Learn more
@@ -178,7 +179,6 @@ export const About = (props: Props) => {
             </div>
           </div>
         </div>
-        {/* Cards */}
         <Image
           src="/background/aboutBg.png"
           alt="bg"
@@ -209,7 +209,7 @@ export const About = (props: Props) => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="max-md:mt-[70px]">
           <div className="w-full">
             <Image
               src="/about/Chart.png"
@@ -225,7 +225,7 @@ export const About = (props: Props) => {
               width={1883}
               height={173}
               alt="chart"
-              className="bg-[black] object-contain px-[16px] md:px-[65px]"
+              className="bg-[black] object-contain px-[16px] max-md:scale-[2.5] md:px-[65px]"
             />
           </div>
         </div>
