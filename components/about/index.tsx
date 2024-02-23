@@ -131,8 +131,6 @@ export const About = (props: Props) => {
         className="absolute top-[40px] z-[-1] max-md:top-0 max-md:h-[450px] max-md:w-[550px] md:-top-[60px] md:right-[80px]"
       />
       <div className="relative flex flex-col" id="aboutDiv">
-        {/* About  */}
-
         <div className="flex justify-center">
           <div className="flex w-[85%] flex-col gap-y-9 md:w-[45%]">
             <div className="md:w-[420px]">
@@ -181,7 +179,6 @@ export const About = (props: Props) => {
             </div>
           </div>
         </div>
-        {/* Cards */}
         <Image
           src="/background/aboutBg.png"
           alt="bg"

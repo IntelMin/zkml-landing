@@ -15,8 +15,6 @@ export const Hero = (props: Props) => {
     <div className="relative p-2 md:p-4" id="hero">
       {isOpen && <NavbarMobile isOpen={isOpen} setIsOpen={setIsOpen} />}
 
-      {/* Topbar */}
-
       <div className="absolute left-0 top-1 flex w-full items-center justify-between">
         <div className="z-10 pl-6 pt-8 md:pl-12">
           <button
@@ -61,8 +59,6 @@ export const Hero = (props: Props) => {
         </div>
       </div>
 
-      {/* Bg BLOB */}
-
       <div className="absolute left-0 top-0 z-[-10] flex items-center max-md:flex-col">
         <Image
           src="/background/blue.png"
@@ -77,8 +73,6 @@ export const Hero = (props: Props) => {
           alt="purple-bg"
         />
       </div>
-
-      {/* Bg Video */}
 
       <div className="relative flex min-h-[calc(95vh-32px)] w-full flex-col overflow-hidden rounded-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/ecosystem/dust.png)] p-5 max-md:pb-0 md:min-h-[calc(100vh-32px)] md:pb-0 md:pr-0">
         <video
