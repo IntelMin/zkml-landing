@@ -12,27 +12,30 @@ const desArray = [
 export const Roadmap = (props: Props) => {
   return (
     <div className="flex min-h-screen w-full flex-col items-center gap-8 py-8 max-md:px-2">
-      <div className="pb-4 font-[PPUltrabold] text-[40px] text-white">
+      <div className="font-[PPUltrabold] text-[42px] text-white max-md:pb-4">
         <h1>Our Roadmap</h1>
       </div>
       <div className="">
         {desArray?.map((item, i) => (
-          <div key={item} className="flex items-center">
-            <div className="flex flex-1 items-center justify-end gap-4">
+          <div
+            key={item}
+            className="flex items-start max-md:flex-col md:items-center"
+          >
+            <div className="flex flex-1 justify-end pl-5 md:items-center md:gap-4">
               <h1
-                className="text-xl font-[700] text-white md:text-[36px]"
+                className="text-[34px] font-[700] text-white md:text-[36px]"
                 style={{
                   background: "linear-gradient(180deg, #FFF 0%, #A7A7A7 100%)",
                   backgroundClip: "text",
-                  textShadow: "0px 2px 24px rgba(56, 229, 255, 0.80)",
+                  textShadow: "0px 2px 24px rgba(56, 329, 255, 1.0)",
                 }}
               >
                 Phase {i + 1}
               </h1>
-              <div className="h-[2px] w-[50px] bg-[#333] md:w-[140px]" />
+              <div className="h-[2px] w-[50px] bg-[#333] max-md:hidden md:w-[140px]" />
             </div>
-            <div className="max-w-[550px] flex-1 border-b-2 border-l-2 border-[#333] p-8 pr-0">
-              <p className="text-sm font-[500] text-white md:text-[20px] md:leading-7">
+            <div className="max-w-[550px] flex-1 border-[#333] p-5 pr-0 max-md:mb-5 md:border-b-2 md:border-l-2 md:p-8">
+              <p className="text-xl font-[500] text-white md:text-[20px] md:leading-7">
                 {item}
               </p>
             </div>

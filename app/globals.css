@@ -6,6 +6,12 @@ body {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  br {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

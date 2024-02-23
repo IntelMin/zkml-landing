@@ -37,7 +37,7 @@ export const Hero = (props: Props) => {
             />
           </button>
         </div>
-        <div className="z-10 pr-12 pt-8">
+        <div className="z-10 pr-8 pt-8 md:pr-12">
           <Link
             href="https://dapp.zkml.systems/"
             className="rounded-[12px] bg-white px-10 py-3 text-black hover:bg-[#c4c6c6] max-md:hidden"
@@ -50,7 +50,13 @@ export const Hero = (props: Props) => {
             }}
             className="md:hidden"
           >
-            <GiHamburgerMenu className="text-xl text-white" />
+            <Image
+              src="/menu-11.svg"
+              alt="bg"
+              width={36}
+              height={36}
+              id="aboutImg"
+            />
           </div>
         </div>
       </div>
@@ -74,7 +80,7 @@ export const Hero = (props: Props) => {
 
       {/* Bg Video */}
 
-      <div className="relative flex min-h-[calc(100vh-32px)] w-full flex-col overflow-hidden rounded-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/ecosystem/dust.png)] p-5 md:pb-0 md:pr-0">
+      <div className="relative flex min-h-[calc(95vh-32px)] w-full flex-col overflow-hidden rounded-[24px] border border-b-0 border-r-0 border-[#3D3D3D] bg-[url(/ecosystem/dust.png)] p-5 max-md:pb-0 md:min-h-[calc(100vh-32px)] md:pb-0 md:pr-0">
         <video
           autoPlay
           loop
@@ -83,22 +89,23 @@ export const Hero = (props: Props) => {
         >
           <source src="/background/ZKMLHero.mp4" type="video/mp4" />
         </video>
-        <div className="flex flex-1 items-center font-[PPUltrabold] text-[35px] font-extrabold leading-[35px] text-white max-md:pb-20 md:text-[52px] md:leading-[60px]">
+        <div className="absolute bottom-0 left-0 right-0 top-0 z-[-9] bg-gradient-to-br from-[#00000081] via-[#00000081] to-[transparent] md:hidden" />
+        <div className="flex flex-1 items-center font-[PPUltrabold] text-[40px] font-extrabold leading-[48px] text-white max-md:translate-y-10 max-md:pb-[60px] md:text-[52px] md:leading-[60px]">
           <h1>
             Unlocking Privacy, Secure <br /> Blockchain Communication, <br />{" "}
             and Cross Interoperability
           </h1>
         </div>
         <div className="relative flex justify-between max-md:flex-col max-md:pb-[20px]">
-          <div className="flex items-end p-5 md:pb-9">
+          <div className="flex items-end p-5 max-md:px-2 md:pb-9">
             <h1
-              className="text-white"
+              className="text-white max-md:text-[20px]"
               style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.6);" }}
             >
               zKML - Zero Knowledge Machine Learning
             </h1>
           </div>
-          <div className="rounded-tl-[24px] p-5 md:w-[30%] md:bg-black md:p-9">
+          <div className="rounded-tl-[24px] p-5 max-md:hidden md:w-[30%] md:bg-black md:p-9">
             <div className="flex flex-col gap-2">
               <div>
                 <h1
@@ -124,6 +131,33 @@ export const Hero = (props: Props) => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="rounded-tl-[24px] p-5 md:hidden md:w-[30%] md:bg-black md:p-9">
+        <div className="flex flex-col gap-2">
+          <div>
+            <h1
+              className="text-white max-md:text-[20px]"
+              style={{ textShadow: "2px 4px 4px rgba(46,91,173,0.2);" }}
+            >
+              zkml - harnessing machine learning to create zk-proofs and secure
+              multiparty computation for data privacy.
+            </h1>
+          </div>
+          <div className="flex items-center gap-6 max-md:flex-col">
+            <Link
+              className="w-full rounded-[12px] bg-[#38E5FF] py-2 text-center text-[16px] text-black hover:bg-[#47a7c4] md:w-[174px]"
+              href="https://dapp.zkml.systems/"
+            >
+              dApp
+            </Link>
+            <Link
+              className="w-full rounded-[12px] border border-white bg-[transparent] py-2 text-center text-[16px] text-white hover:bg-white hover:text-black md:w-[174px]"
+              href="https://zkml.gitbook.io/doc"
+            >
+              Learn more
+            </Link>
           </div>
         </div>
       </div>

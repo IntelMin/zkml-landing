@@ -28,10 +28,10 @@ export const Privacy = (props: Props) => {
         className="absolute left-0 top-0 z-[-1] translate-y-[150px]"
       />
       <ParallaxProvider>
-        <div className="relative grid w-full gap-12 overflow-hidden rounded-[24px] border border-[#272727] max-md:px-6 max-md:py-4 md:grid-cols-2 md:p-12">
+        <div className="relative grid w-full gap-12 overflow-hidden rounded-[24px] max-md:px-0 max-md:py-4 md:grid-cols-2 md:border md:border-[#272727] md:p-12">
           {!isMdScreen && (
-            <Parallax translateY={[-5, 66]}>
-              <div className="sticky top-0">
+            <Parallax translateY={[-20, 50]}>
+              <div className="sticky top-10">
                 <div className="h-[380px] grid-cols-1 overflow-hidden rounded-[16px] md:h-[608px]">
                   <video
                     autoPlay
@@ -39,10 +39,7 @@ export const Privacy = (props: Props) => {
                     muted
                     className="h-full w-full object-cover object-center"
                   >
-                    <source
-                      src="/background/privacyVideo.webm"
-                      type="video/webm"
-                    />
+                    <source src="/background/zsnarky23.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -57,10 +54,7 @@ export const Privacy = (props: Props) => {
                   muted
                   className="h-full w-full object-cover object-center"
                 >
-                  <source
-                    src="/background/privacyVideo.webm"
-                    type="video/webm"
-                  />
+                  <source src="/background/zsnarky23.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -135,7 +129,7 @@ export const Privacy = (props: Props) => {
           </div>
         </div>
       </ParallaxProvider>
-      <div className="w-full">
+      <div className="w-full overflow-hidden rounded-2xl">
         <video
           autoPlay
           loop
