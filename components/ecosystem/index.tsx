@@ -85,7 +85,7 @@ export const Ecosystem = (props: Props) => {
             </div>
             <div>
               <h1>
-                Layer 2 (L2) Integration (ZKML & Bittensor): Facilitates the heavy-lifting of AI model training and verification processes off-chain, leveraging ZKML's enhanced privacy-preserving computations and Bittensor's distributed network for scalable, decentralized computation.
+                Layer 2 (L2) Integration (ZKML & Bittensor): Facilitates the heavy-lifting of AI model training and verification processes off-chain, leveraging ZKMLs enhanced privacy-preserving computations and Bittensors distributed network for scalable, decentralized computation.
               </h1>
             </div>
           </div>
