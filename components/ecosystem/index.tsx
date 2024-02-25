@@ -12,7 +12,7 @@ type Props = {};
 const a1 = [
   {
     path: "/ecosystem/one.svg",
-    name: "zKSearch",
+    name: "zKSearch & Bittensor",
     description:
       "Decentralized search engines powered by AI models that do not store user data.",
   },
@@ -74,24 +74,41 @@ export const Ecosystem = (props: Props) => {
       <div className="pb-4 font-[PPUltrabold] text-[40px] text-white">
         <h1>zKML Ecosystem</h1>
       </div>
+
+      <div className="flex justify-center">
+        <div className="max-w-5xl mx-auto p-4">
+          <div className="flex flex-col gap-y-4 text-white">
+            <div>
+              <h1>
+                Layer 1 (L1) Integration: Hosts smart contracts for managing permissions, submissions, and verification of AI models, serving as the immutable record keeper and ensuring transparent governance within the ecosystem.
+              </h1>
+            </div>
+            <div>
+              <h1>
+                Layer 2 (L2) Integration (ZKML & Bittensor): Facilitates the heavy-lifting of AI model training and verification processes off-chain, leveraging ZKML's enhanced privacy-preserving computations and Bittensor's distributed network for scalable, decentralized computation.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="grid w-[80%] grid-cols-1 md:grid-cols-3">
         {a1?.slice(0, 3).map((item, i) => {
           return (
             <div
               key={item.name}
-              className={`flex col-span-1 bg-[url(/ecosystem/dust.png)]  ${
-                i < 2 ? "border-r border-[#333]" : ""
-              }  flex-col items-center gap-2 p-[30px]`}
+              className={`flex col-span-1 bg-[url(/ecosystem/dust.png)]  ${i < 2 ? "border-r border-[#333]" : ""
+                }  flex-col items-center gap-2 p-[30px]`}
               style={
                 i !== 2 || !isMobile
                   ? {
-                      background:
-                        "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
-                    }
+                    background:
+                      "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
+                  }
                   : {
-                      background:
-                        "radial-gradient(0.31% 0.77% at 99.7% 54.54%, black 1.55%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
-                    }
+                    background:
+                      "radial-gradient(0.31% 0.77% at 99.7% 54.54%, black 1.55%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
+                  }
               }
             >
               <div
@@ -115,19 +132,18 @@ export const Ecosystem = (props: Props) => {
           return (
             <div
               key={item?.name}
-              className={`flex col-span-1 bg-[url(/ecosystem/dust.png)]  ${
-                i < 2 ? "border-r border-[#333]" : ""
-              }  flex-col items-center gap-2 p-[30px]`}
+              className={`flex col-span-1 bg-[url(/ecosystem/dust.png)]  ${i < 2 ? "border-r border-[#333]" : ""
+                }  flex-col items-center gap-2 p-[30px]`}
               style={
                 i !== 2 || !isMobile
                   ? {
-                      background:
-                        "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
-                    }
+                    background:
+                      "radial-gradient(0.31% 13.77% at 99.7% 54.54%,#38E5FF 1.55%, rgb(255 255 255 / 0%) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
+                  }
                   : {
-                      background:
-                        "radial-gradient(0.31% 0.77% at 99.7% 54.54%, black 1.55%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
-                    }
+                    background:
+                      "radial-gradient(0.31% 0.77% at 99.7% 54.54%, black 1.55%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
+                  }
               }
             >
               <div

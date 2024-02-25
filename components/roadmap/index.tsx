@@ -3,10 +3,10 @@ import React from "react";
 type Props = {};
 
 const desArray = [
-  "Develop ZKML's core infrastructure, Privacy Router, integrate zSnarky, establish connections with ROSE and MINA networks.",
-  "Launch zKSearch, develop zKOS and Mobile-zKOS, implement Privacy-Centric VoIP.",
+  "Core Infrastructure: Establishment of privacy-focused infrastructure. XRPL. Privacy Router: Development of a privacy router for anonymous transactions. zSnarky Integration: Incorporation of zero-knowledge proofs. zKOS: Development of a secure operating system framework.",
+  "Launch zKSearch, develop zKOS and Mobile-zKOS, implement Privacy-Centric VoIP. Collaborate with privacy-focused search engines for shared insights. Leverage Bittensor for powering the zkSearch AI search engine, focusing on the ZKML subnet on Bittensor to ensure enhanced privacy and security. dapt the zKOS framework for mobile devices, ensuring compatibility with major mobile hardware. Engage with communities around LineageOS and GrapheneOS for insights on privacy-centric mobile OS development.",
   "Introduce zkShield, enhance interoperability with ROSE and MINA networks, establish partnerships for cross-chain transactions.",
-  "Conduct testing and security audits, scale up user base through marketing and partnerships, expand services to include private browsing features, continuously improve platform based on user feedback and emerging technologies.",
+  "Conduct testing and security audits, scale up user base through marketing and partnerships, expand services to include private browsing features, continuously improve platform based on user feedback and emerging technologies. Position zKML as a leader in confidential transactions through strategic partnerships, developer collaborations, and educational campaigns. Build privacy solutions on both networks, drawing inspiration from projects like Minamix and TornadoMina showcased at ETHGlobal",
 ];
 
 export const Roadmap = (props: Props) => {
