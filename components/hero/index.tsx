@@ -81,7 +81,7 @@ export const Hero = (props: Props) => {
           muted
           className="absolute left-0 top-0 z-[-10] h-full w-full object-cover object-right"
         >
-          <source src="/background/ZKMLHero.mp4" type="video/mp4" />
+          <source src="/background/ZKMLHero.mp4" />
         </video>
         <div className="absolute bottom-0 left-0 right-0 top-0 z-[-9] bg-gradient-to-br from-[#00000081] via-[#00000081] to-[transparent] md:hidden" />
         <div className="flex flex-1 items-center font-[PPUltrabold] text-[40px] font-extrabold leading-[48px] text-white max-md:translate-y-10 max-md:pb-[60px] md:text-[52px] md:leading-[60px]">

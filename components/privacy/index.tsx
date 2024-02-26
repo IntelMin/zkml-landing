@@ -54,7 +54,7 @@ export const Privacy = (props: Props) => {
                   muted
                   className="h-full w-full object-cover object-center"
                 >
-                  <source src="./background/zsnarky23.mp4" type="video/mp4" />
+                  <source src="./background/zsnarky23.mp4" />
                 </video>
               </div>
             </div>
