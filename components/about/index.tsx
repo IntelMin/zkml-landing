@@ -162,7 +162,7 @@ export const About = (props: Props) => {
                 <div>
                   <h1>
                     We offer zKOS operating systems and Mobile-zKOS for secure
-                    communication on mobile devices. 
+                    communication on mobile devices.
                   </h1>
                 </div>
                 <div>
@@ -172,14 +172,15 @@ export const About = (props: Props) => {
                   <h1>
                     We offer solutions like the Privacy Router for secure and
                     anonymous CBDC transactions and integrates Snarky technology
-                    for confidential blockchain transactions. 
+                    for confidential blockchain transactions.
                   </h1>
                 </div>
                 <h1>
-                    ZKML is a privacy-focused Layer 1 protocol that leverages zero-knowledge proofs, multi-party 
-                    computation, and homomorphic encryption (FHE) to enable secure, 
-                    anonymous blockchain applications and transactions. 
-                  </h1>
+                  ZKML is a privacy-focused Layer 1 protocol that leverages
+                  zero-knowledge proofs, multi-party computation, and
+                  homomorphic encryption (FHE) to enable secure, anonymous
+                  blockchain applications and transactions.
+                </h1>
               </div>
             </div>
           </div>
