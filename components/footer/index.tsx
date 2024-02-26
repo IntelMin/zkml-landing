@@ -36,7 +36,7 @@ export const Footer = (props: Props) => {
             <div className="mt-8 flex items-center gap-5">
               <div className="rounded-full bg-[#40d1cf22] px-2 py-3 md:px-6">
                 <h1 className="font-[AzeretMono-Regular] font-[400] text-[#38E5FF]">
-                  CA: 0XIE32EEHUIY32IE32JRH32IUHR
+                  CA: 0xE92344b4eDF545F3209094B192E46600A19E7C2D
                 </h1>
               </div>
             </div>

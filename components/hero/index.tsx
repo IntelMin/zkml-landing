@@ -37,10 +37,10 @@ export const Hero = (props: Props) => {
         </div>
         <div className="z-10 pr-8 pt-8 md:pr-12">
           <Link
-            href="https://dapp.zkml.systems/"
+            href="https://app.uniswap.org/tokens/ethereum/0xe92344b4edf545f3209094b192e46600a19e7c2d"
             className="rounded-[12px] bg-white px-10 py-3 text-black hover:bg-[#c4c6c6] max-md:hidden"
           >
-            dApp
+            $ZKML
           </Link>
           <div
             onClick={() => {
