@@ -227,7 +227,7 @@ export const About = (props: Props) => {
           </div>
           <div className="w-full">
             <Image
-              src="/about/zlogo.svg"
+              src="/about/zlogo.png"
               width={1883}
               height={173}
               alt="chart"
