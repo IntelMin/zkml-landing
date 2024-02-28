@@ -19,7 +19,7 @@ export const Footer = (props: Props) => {
       >
         <div className="flex flex-wrap items-start justify-between gap-20 max-md:flex-col">
           <div className="flex translate-y--10 flex-col items-start">
-            <div className="max-md:w-[250px] md:pl-12 md:pt-8">
+            <div className="max-md:w-[250px] md:pt-8">
               <Link href="#" className="text-white">
                 <Image
                   src="/icons/logo.png"
@@ -29,13 +29,13 @@ export const Footer = (props: Props) => {
                 />
               </Link>
             </div>
-            <p className="mt-6 text-base leading-7 text-white">
+            <p className="mt-6 md:w-2/3 text-base leading-7 text-white">
               Unlocking Privacy, Secure Blockchain Communication, and Cross
               Interoperability.
             </p>
             <div className="mt-8 flex items-center gap-5">
               <div className="rounded-full bg-[#40d1cf22] px-2 py-3 md:px-6">
-                <h1 className="font-[AzeretMono-Regular] font-[400] text-[#38E5FF]">
+                <h1 className="text-sm md:text-lg font-[AzeretMono-Regular] font-[400] text-[#38E5FF]">
                   CA: 0xE92344b4eDF545F3209094B192E46600A19E7C2D
                 </h1>
               </div>

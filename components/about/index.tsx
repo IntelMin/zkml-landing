@@ -225,13 +225,13 @@ export const About = (props: Props) => {
               className="px-[16px] md:px-[65px]"
             />
           </div>
-          <div className="w-full">
+          <div className="rounded-[20px] bg-black-400 w-[90%] mx-auto overflow-hidden">
             <Image
               src="/about/zlogo.png"
               width={1883}
               height={173}
               alt="chart"
-              className="bg-[black] object-contain px-[16px] max-md:scale-[2.5] md:px-[65px]"
+              className="bg-[black] object-contain max-md:scale-[2.5]"
             />
           </div>
         </div>
