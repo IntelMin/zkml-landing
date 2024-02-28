@@ -225,14 +225,18 @@ export const About = (props: Props) => {
               className="px-[16px] md:px-[65px]"
             />
           </div>
+          <h1 className="text-3xl md:text-7xl text-center mt-10 text-white">
+            ZkSearch
+          </h1>
           <div className="rounded-[20px] bg-black-400 w-[90%] mx-auto overflow-hidden">
-            <Image
-              src="/about/zlogo.png"
-              width={1883}
-              height={173}
-              alt="chart"
-              className="bg-[black] object-contain max-md:scale-[2.5]"
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              className=" left-0 top-0 z-[-10] h-full w-full object-cover object-right"
+            >
+              <source src="/background/transformer.webm" />
+            </video>
           </div>
         </div>
       </div>
