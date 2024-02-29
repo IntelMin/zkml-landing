@@ -128,6 +128,36 @@ export const Privacy = (props: Props) => {
             </div>
           </div>
         </div>
+        <div className="max-md:mt-[70px]">
+        <div className="md:w-[420px]">
+              <div className="pl-5 mt-10">
+                <div className="font-[PPUltrabold] text-[20px] leading-10 text-white md:text-[20px] md:leading-[20px] animate-pulse">
+                  <h1>zK AI search engine</h1>
+                </div>
+                <div className="flex font-[PPUltrabold] text-[40px] text-white max-md:px-16 md:translate-x-[calc(10%)] md:text-[40px] md:leading-[40px]">
+                  <h1>zKSearch</h1>
+                </div>
+              </div>
+              <div
+                className="h-[5px] w-full"
+                style={{
+                  borderRadius: "25px",
+                  background:
+                    "linear-gradient(270deg, #38E5FF 0%, rgba(56, 229, 255, 0.00) 100%)",
+                }}
+              />
+            </div>
+          <div className="rounded-[20px] bg-black-400 w-[90%] mx-auto overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              className=" left-0 top-0 z-[-10] h-full w-full object-cover object-right"
+            >
+              <source src="/background/transformer.webm" />
+            </video>
+          </div>
+        </div>
       </ParallaxProvider>
       <div className="w-full overflow-hidden rounded-2xl">
         <video
